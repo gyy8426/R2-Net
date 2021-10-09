@@ -1,22 +1,14 @@
-# R2-Net
-Code for Relation Regularized Scene Graph Generation
+# Relation Regularized Scene Graph Generation
+Code for Relation Regularized Scene Graph Generation.
+
+## Framework
+<div align=center><img width="672" height="508" src=docs/framework_GlobalLocalStruct_V2_00.png/></div>
+
+## Abstract
+Scene graph generation (SGG) is built on top of detected objects to predict object pairwise visual relations for describing the image content abstraction. Existing works have revealed that if the links between objects are given as prior knowledge, the performance of SGG is significantly improved. Inspired by this observation, in this paper, we propose a Relation Regularized Network (R2-Net), which can predict whether there is a relationship between two objects and encode this relation into object feature refinement and better SGG. Specifically, we first construct an affinity matrix among detected objects to represent the probability of a relationship between two objects. Graph Convolution Networks (GCNs) over this relation affinity matrix are then used as object encoders, producing relation-regularized representations of objects. With these relation-regularized features, our R2-Net can effectively refine object labels and generate scene graphs. Extensive experiments are conducted on the Visual Genome dataset for three SGG tasks (\ie PREDCLS, SGSLS, and SGDET), demonstrating the effectiveness of our proposed method. Ablation studies also verify the key roles of our proposed components in performance improvement.
 
 
-
-### Bibtex
-
-```
-@ARTICLE{9376912,
-  author={Guo, Yuyu and Gao, Lianli and Song, Jingkuan and Wang, Peng and Sebe, Nicu and Shen, Heng Tao and Li, Xuelong},
-  journal={IEEE Transactions on Cybernetics}, 
-  title={Relation Regularized Scene Graph Generation}, 
-  year={2021},
-  volume={},
-  number={},
-  pages={1-12},
-  doi={10.1109/TCYB.2021.3052522}}
-```
-# Setup
+## Setup
 
 
 0. Install python3.6 and pytorch 3. I recommend the [Anaconda distribution](https://repo.continuum.io/archive/). To install PyTorch if you haven't already, use
@@ -34,6 +26,19 @@ Note: You might have to modify the learning rate and batch size, particularly if
 5. Refine for detection: run ./scripts/refine_for_detection.sh.
 6. Evaluate: Refer to the scripts ./scripts/eval_models_sg[cls/det].sh.
 
-# help
+## Help
 
 Feel free to ping me if you encounter trouble getting it to work!
+## Bibtex
+
+```
+@ARTICLE{9376912,
+  author={Guo, Yuyu and Gao, Lianli and Song, Jingkuan and Wang, Peng and Sebe, Nicu and Shen, Heng Tao and Li, Xuelong},
+  journal={IEEE Transactions on Cybernetics}, 
+  title={Relation Regularized Scene Graph Generation}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-12},
+  doi={10.1109/TCYB.2021.3052522}}
+```
