@@ -10,7 +10,6 @@ Scene graph generation (SGG) is built on top of detected objects to predict obje
 
 ## Setup
 
-
 0. Install python3.6 and pytorch 3. I recommend the [Anaconda distribution](https://repo.continuum.io/archive/). To install PyTorch if you haven't already, use
  ```conda install pytorch torchvision cuda90 -c pytorch```.
 1. Update the config file with the dataset paths. Specifically:
@@ -29,6 +28,7 @@ Note: You might have to modify the learning rate and batch size, particularly if
 ## Help
 
 Feel free to ping me if you encounter trouble getting it to work!
+
 ## Bibtex
 
 ```
