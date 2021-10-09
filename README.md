@@ -2,7 +2,7 @@
 Code for Relation Regularized Scene Graph Generation.
 
 ## Framework
-<div align=center><img width="672" height="508" src=docs/framework_GlobalLocalStruct_V2_00.png/></div>
+<div align=center><img width="672" height="255" src=docs/framework_GlobalLocalStruct_V2_00.png/></div>
 
 ## Abstract
 Scene graph generation (SGG) is built on top of detected objects to predict object pairwise visual relations for describing the image content abstraction. Existing works have revealed that if the links between objects are given as prior knowledge, the performance of SGG is significantly improved. Inspired by this observation, in this paper, we propose a Relation Regularized Network (R2-Net), which can predict whether there is a relationship between two objects and encode this relation into object feature refinement and better SGG. Specifically, we first construct an affinity matrix among detected objects to represent the probability of a relationship between two objects. Graph Convolution Networks (GCNs) over this relation affinity matrix are then used as object encoders, producing relation-regularized representations of objects. With these relation-regularized features, our R2-Net can effectively refine object labels and generate scene graphs. Extensive experiments are conducted on the Visual Genome dataset for three SGG tasks (\ie PREDCLS, SGSLS, and SGDET), demonstrating the effectiveness of our proposed method. Ablation studies also verify the key roles of our proposed components in performance improvement.
